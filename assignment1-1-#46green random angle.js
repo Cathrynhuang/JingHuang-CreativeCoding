@@ -9,7 +9,7 @@ function draw(){
     stroke(110,210,75);
     line(x,0,x,400);
     
-    var y=random(390);
+    var y=random(400);
     stroke(110,210,75);
     line(x,y,x+3,y+3);
     line(x+3,y+3,x,y+6);
