@@ -1,3 +1,10 @@
+/**
+* Kevin's notes:  Really great work.  I especially appreciate the use of triangles even though visually
+* the shapes appear to be rectangular.  One item you can look into is the rotate() command, which we will
+* discuss in greater depth in the coming weeks.  rotate() will allow you to draw rectangles and rotate them, essentially
+* achieving the same effect as you have done here.  Lastly, think about how you would program this same exercise to be 
+* dynamically resizable.  In other words, how can you avoid using hard coded numbers to represent position and size?
+*/
 var x1=400;
 var y1=1.25*x1-109.375;
 var x2=200;
