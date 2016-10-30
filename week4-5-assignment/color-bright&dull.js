@@ -13,7 +13,7 @@ function draw() {
    for(var m=0;m< width/2;m += rectStep){
     noStroke();
     
-    var lerpAmt = map(m, 0, width, 0, 1.0);
+    var lerpAmt = map(m, 0, width/2, 0, 1.0);
     
     var lerpedCol = lerpColor(colorFrom,colorTo,lerpAmt);    
     fill(lerpedCol);
