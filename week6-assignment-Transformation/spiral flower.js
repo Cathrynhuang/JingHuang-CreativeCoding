@@ -20,7 +20,7 @@ function draw() {
   pop();
 
   num++;
-  while(num===55){
+  if(num===55){
       noLoop();
     }
   }
