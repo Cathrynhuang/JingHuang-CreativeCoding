@@ -41,7 +41,7 @@ Particle.prototype.display = function() {
   noStroke();
   strokeWeight(2);
   fill(this.particlecolor, this.lifespan);
-  ellipse(this.position.x+1, this.position.y,this.size,this.size);
+  ellipse(this.position.x, this.position.y,this.size,this.size);
 };
 
 
