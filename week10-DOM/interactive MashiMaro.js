@@ -1,7 +1,6 @@
 function MashiMaro(posx, posy){
-  //this.itsize=1;
+  
   this.strokecolor =50;
-  // this.bg=100;
   this.posx = posx;
   this.posy = posy;
 }
@@ -91,7 +90,7 @@ function setup(){
     
     MashiMaros.push(new MashiMaro(random(windowWidth/5,windowWidth*4/5), random(windowHeight/5,windowHeight*4/5)));
   });
-  //then position it
+  
 
   mySlider1.position(windowWidth/4+100,40);
   mySlider2.position(windowWidth/4+100,60);
