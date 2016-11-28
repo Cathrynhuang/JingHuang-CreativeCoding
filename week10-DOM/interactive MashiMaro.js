@@ -1,3 +1,20 @@
+/**
+** Kevin's comments:  Really nice work here!  I can see you're really getting used to object oriented programming.
+Some advanced commments/suggestions.  Think about how you might control a specific object instance with your GUI sliders,
+rather than having the parameters change all instanced objects uniformly.  One way I would do this is keep track of the "activeMashiMaroIndex".
+This would be a variable pointing to the array index of the MashiMaros.  You could then create a button that flips through the MashiMaros and
+returns the exact active object you're looking for.  Once you have a specific object instance, you could apply the changes to that object instead of all Mashis in a loop
+See below for the start of an implementation.
+**/
+var activeMashiMaroIndex = 0;//variable to hold the index number of the MashiMaro in array 
+
+//returns a MashiMaro object given an index
+// pass in the activeMashiMaroIndex when you call this function.  See below...
+function getActive(index){
+  return MashiMaros[index];
+}
+
+
 function MashiMaro(posx, posy){
   
   this.strokecolor =50;
@@ -89,6 +106,7 @@ function setup(){
     clear();
     
     MashiMaros.push(new MashiMaro(random(windowWidth/5,windowWidth*4/5), random(windowHeight/5,windowHeight*4/5)));
+    activeMashiMaroIndex = MashiMaros.length - 1;//active index points to the end of our array
   });
   
 
@@ -98,7 +116,13 @@ function setup(){
   mySlider1.changed(Size);
   mySlider2.changed(Strokecolor);
   mySlider3.changed(BackgroundColor);
-
+  var nextActiveMashiBtn = createButton("Next active MashiMaro");
+  //position your button here
+  //...
+  nextActiveMashiBtn.mouseClicked(function(){
+    activeMashiMaroIndex++;
+    activeMashiMaroIndex %= MashiMaros.length-1; //ensures we never exceed the length of our array
+  });
 }
 
 var bg=255;
@@ -106,7 +130,6 @@ var bg=255;
 function draw(){
   
   background(bg);
-  
   for(var i=0; i < MashiMaros.length; i++){
     scale(MashiMaros[i].itsize);
     MashiMaros[i].draw();
@@ -114,6 +137,8 @@ function draw(){
 }
 
 function Size(){
+  //instead of looping through all MashiMaros, try calling 
+  //getActive(activeMashiMaroIndex).itsize = this.value() / 5;
   for(var i=0; i < MashiMaros.length; i++){
     MashiMaros[i].itsize = this.value()/5;
   }
