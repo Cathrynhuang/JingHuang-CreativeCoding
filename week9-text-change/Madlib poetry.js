@@ -1,3 +1,7 @@
+/**
+** Kevin's comments:  Cool!  One small comment, I think you don't need to create two RiLiexicon() instances in your current
+implementation.  You should be able to work with lexicon1 for both your conditional expressions as well as randomWord()
+**/
 var words=[];
 var wordPosX = 20;
 var wordPosY = 20;
