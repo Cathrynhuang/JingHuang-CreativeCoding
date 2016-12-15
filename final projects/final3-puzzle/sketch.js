@@ -180,6 +180,8 @@ function draw() {
   text("Be careful: do not click the overlap parts of pictures.",10,580);
   textSize(40);
   text("PUZZLE GAME",750,60);
+  textSize(15);
+  text("Traditional Chinese Painting (Group portrait of Noblewomen)",690,80);
  
   puzzle1.onMousePressed = function() {
   if((puzzle1.position.x !==puzzle6.position.x && puzzle1.position.y !==puzzle6.position.y) || 
